@@ -40,6 +40,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStores)).BeginInit();
@@ -91,6 +92,7 @@
             this.dgvStores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStores.Size = new System.Drawing.Size(490, 325);
             this.dgvStores.TabIndex = 0;
+            this.dgvStores.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStores_CellValueChanged);
             // 
             // tabPage2
             // 
@@ -116,6 +118,7 @@
             this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProducts.Size = new System.Drawing.Size(490, 325);
             this.dgvProducts.TabIndex = 0;
+            this.dgvProducts.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellValueChanged);
             // 
             // tabPage3
             // 
@@ -155,7 +158,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnUpdate.Location = new System.Drawing.Point(215, 373);
+            this.btnUpdate.Location = new System.Drawing.Point(160, 373);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 24);
             this.btnUpdate.TabIndex = 2;
@@ -166,7 +169,7 @@
             // btnRefresh
             // 
             this.btnRefresh.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnRefresh.Location = new System.Drawing.Point(134, 373);
+            this.btnRefresh.Location = new System.Drawing.Point(76, 373);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 24);
             this.btnRefresh.TabIndex = 3;
@@ -177,7 +180,7 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDelete.Location = new System.Drawing.Point(296, 373);
+            this.btnDelete.Location = new System.Drawing.Point(244, 373);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 24);
             this.btnDelete.TabIndex = 4;
@@ -185,11 +188,23 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAdd.Location = new System.Drawing.Point(328, 373);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 24);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "&Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 442);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnUpdate);
@@ -198,6 +213,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(520, 481);
             this.Name = "FrmMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Database Management";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tabControl.ResumeLayout(false);
@@ -224,5 +240,6 @@
         private System.Windows.Forms.DataGridView dgvStores;
         private System.Windows.Forms.DataGridView dgvSales;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

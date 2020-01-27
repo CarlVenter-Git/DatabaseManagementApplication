@@ -10,27 +10,29 @@ namespace CordysCodeTestAdminApp
 {
     class DatabaseGetQuery
     {
+        private string currentDB = DBConnectionHelper.ConnStringValue("CordysManagementDB");
+
         public List<Store> GetStores()
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(DBConnectionHelper.ConnStringValue("CordysManagementDB")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(currentDB))
             {
-                return connection.Query<Store>("Select * from Stores").ToList();
+                return connection.Query<Store>("SELECT * FROM Stores").ToList();
             }
         }
 
         public List<Product> GetProducts()
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(DBConnectionHelper.ConnStringValue("CordysManagementDB")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(currentDB))
             {
-                return connection.Query<Product>("Select * from Products").ToList();
+                return connection.Query<Product>("SELECT * FROM Products").ToList();
             }
         }
 
-        public List<Sale> GetSales()
+        public List<SaleView> GetSales()
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(DBConnectionHelper.ConnStringValue("CordysManagementDB")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(currentDB))
             {
-                return connection.Query<Sale>("Select * from SalesView").ToList();
+                return connection.Query<SaleView>("SELECT * FROM SalesView").ToList();
             }
         }
     }

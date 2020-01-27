@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace CordysCodeTestAdminApp
 {
-    class Sale
+    class SaleView
     {
         public int SaleID { get; set; }
-        public int ProductID { get; set; }
-        public int StoreID { get; set; }
+        public string Description { get; set; }
+        public string Name { get; set; }
         public DateTime Date { get; set; }
         public int Quantity { get; set; }
+        public double Price { get; set; }
     }
 }
