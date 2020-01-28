@@ -107,39 +107,6 @@ namespace CordysCodeTestAdminApp
             FillDataGrid();
         }
 
-        private void FillDataGrid()
-        {
-            DatabaseGetQuery dq = new DatabaseGetQuery();
-
-            switch (tabControl.SelectedIndex)
-            {
-                case 0:
-                    stores = dq.GetStores();
-                    dgvStores.DataSource = stores;
-                    break;
-                case 1:
-                    products = dq.GetProducts();
-                    dgvProducts.DataSource = products;
-                    break;
-                case 2:
-                    sales = dq.GetSales();
-                    dgvSales.DataSource = sales;
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            FillDataGrid();
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             switch (tabControl.SelectedIndex)
@@ -186,5 +153,39 @@ namespace CordysCodeTestAdminApp
 
             productEditList.Add(product);
         }
+
+        private void FillDataGrid()
+        {
+            DatabaseGetQuery dq = new DatabaseGetQuery();
+
+            switch (tabControl.SelectedIndex)
+            {
+                case 0:
+                    stores = dq.GetStores();
+                    dgvStores.DataSource = stores;
+                    break;
+                case 1:
+                    products = dq.GetProducts();
+                    dgvProducts.DataSource = products;
+                    break;
+                case 2:
+                    sales = dq.GetSales();
+                    dgvSales.DataSource = sales;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillDataGrid();
+        }
+
     }
 }

@@ -10,7 +10,7 @@ namespace CordysCodeTestAdminApp
 {
     class DatabaseDeleteQuery
     {
-        private string currentDB = DBConnectionHelper.ConnStringValue("CordysManagementDB");
+        private string currentDB = DBConnectionHelper.ConnStringValue();
 
         public bool UpdateStores(int id)
         {
@@ -26,8 +26,6 @@ namespace CordysCodeTestAdminApp
                 {
                     return false;
                 }
-
-                
             }
         }
 

@@ -10,7 +10,7 @@ namespace CordysCodeTestAdminApp
 {
     class DatabaseAddQuery
     {
-        private string currentDB = DBConnectionHelper.ConnStringValue("CordysManagementDB");
+        private string currentDB = DBConnectionHelper.ConnStringValue();
 
         public bool AddStore(Store store)
         {

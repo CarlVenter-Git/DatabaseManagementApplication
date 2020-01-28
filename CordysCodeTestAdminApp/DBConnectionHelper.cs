@@ -9,7 +9,7 @@ namespace CordysCodeTestAdminApp
 {
     public static class DBConnectionHelper
     {
-        public static string ConnStringValue(string name)
+        public static string ConnStringValue(string name = "CordysManagementDB")
         {
             return ConfigurationManager.ConnectionStrings[name].ConnectionString;
         }
