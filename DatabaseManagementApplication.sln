@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CordysCodeTestAdminApp", "CordysCodeTestAdminApp\CordysCodeTestAdminApp.csproj", "{4578659A-ED62-4FA3-A9A3-E73921A59EA3}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CordysCodeTestSetup", "CordysCodeTestSetup\CordysCodeTestSetup.vdproj", "{FEA98D5D-B6F6-4E42-A069-BFF6D6991035}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +15,6 @@ Global
 		{4578659A-ED62-4FA3-A9A3-E73921A59EA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4578659A-ED62-4FA3-A9A3-E73921A59EA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4578659A-ED62-4FA3-A9A3-E73921A59EA3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FEA98D5D-B6F6-4E42-A069-BFF6D6991035}.Debug|Any CPU.ActiveCfg = Debug
-		{FEA98D5D-B6F6-4E42-A069-BFF6D6991035}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

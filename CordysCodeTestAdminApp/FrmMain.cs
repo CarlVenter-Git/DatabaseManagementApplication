@@ -15,7 +15,6 @@ namespace CordysCodeTestAdminApp
         private List<Store> stores = new List<Store>();
         private List<Product> products = new List<Product>();
         private List<SaleView> sales = new List<SaleView>();
-
         private List<Store> storeEditList = new List<Store>();
         private List<Product> productEditList = new List<Product>();
 
